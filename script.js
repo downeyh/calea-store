@@ -6,7 +6,7 @@ const products = [
     color: "black",
     price: 389000,
     sizes: [35,36,37,38,39,40,41,42,43,44,45],
-    image: "assets/heels-black.jpg",
+    image: "assets/lace-heels-black.jpg",
     tags: ["Timeless", "Formal", "8 cm"]
   },
   {
@@ -16,7 +16,7 @@ const products = [
     color: "silver",
     price: 259000,
     sizes: [35,36,37,38,39,40,41,42,43,44,45],
-    image: "assets/flats-silver.jpg",
+    image: "assets/lace-flats-silver.jpg",
     tags: ["Soft", "Daily", "3 cm"]
   },
   {
@@ -26,7 +26,7 @@ const products = [
     color: "brown",
     price: 259000,
     sizes: [35,36,37,38,39,40,41,42,43,44,45],
-    image: "assets/flats-brown.jpg",
+    image: "assets/lace-flats-brown.jpg",
     tags: ["Warm tone", "Daily", "3 cm"]
   },
   {
@@ -36,7 +36,7 @@ const products = [
     color: "black",
     price: 259000,
     sizes: [35,36,37,38,39,40,41,42,43,44,45],
-    image: "assets/flats-black.jpg",
+    image: "assets/lace-flats-black.jpg",
     tags: ["Classic", "Daily", "3 cm"]
   },
   {
@@ -46,7 +46,7 @@ const products = [
     color: "cream",
     price: 289000,
     sizes: [35,36,37,38,39,40,41,42,43,44,45],
-    image: "assets/maryjane-cream.jpg",
+    image: "assets/lace-maryjane-cream.jpg",
     tags: ["Elegant", "Office", "Strap"]
   },
   {
@@ -56,7 +56,7 @@ const products = [
     color: "brown",
     price: 289000,
     sizes: [35,36,37,38,39,40,41,42,43,44,45],
-    image: "assets/maryjane-brown.jpg",
+    image: "assets/lace-maryjane-brown.jpg",
     tags: ["Mocha", "Office", "Strap"]
   },
 ];
