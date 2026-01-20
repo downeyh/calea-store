@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caléa — Every Step, Your Path</title>
+  <meta name="description" content="Caléa — sepatu wanita soft-luxury, elegan dan nyaman. Ukuran inklusif 35–45." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Playfair Display (heading) + Inter (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <p class="topbar__text">Soft-luxury shoes • Size-inclusive 35–45 • Anti-lecet & breathable</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="Caléa Home">
+        <span class="brand__logo">Caléa</span>
+        <span class="brand__tag">Every Step, Your Path</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#shop">Shop</a>
+        <a href="#why">Why Caléa</a>
+        <a href="#size-guide">Size Guide</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="btn btn--ghost" id="btnOpenSearch" aria-label="Cari produk">
+          Search
+        </button>
+        <button class="btn btn--primary" id="btnOpenCart" aria-label="Buka keranjang">
+          Cart <span class="badge" id="cartCount">0</span>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="#shop">Shop</a>
+      <a href="#why">Why Caléa</a>
+      <a href="#size-guide">Size Guide</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <h1>Soft-Luxury Shoes for Every Woman.</h1>
+          <p>
+            Caléa menghadirkan sepatu wanita yang elegan, nyaman dipakai seharian,
+            dan size-inclusive 35–45. Desain timeless, warna netral, cocok untuk workwear
+            maupun acara formal.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#shop">Shop Now</a>
+            <a class="btn btn--ghost" href="#why">Explore Details</a>
+          </div>
+
+          <div class="hero__highlights">
+            <div class="pill">Ukuran 35–45</div>
+            <div class="pill">Memory foam feel</div>
+            <div class="pill">Breathable & anti-lecet</div>
+          </div>
+        </div>
+
+        <div class="hero__media" aria-label="Featured product preview">
+          <div class="media-card">
+            <img src="assets/heels-black.jpg" alt="Caléa Heels Black" loading="lazy">
+            <div class="media-card__meta">
+              <p class="media-card__title">Signature Heel — Black</p>
+              <p class="media-card__sub">Elegant silhouette • 8 cm</p>
+            </div>
+          </div>
+
+          <div class="media-stack">
+            <div class="media-mini">
+              <img src="assets/maryjane-cream.jpg" alt="Caléa Mary Jane Cream" loading="lazy">
+            </div>
+            <div class="media-mini">
+              <img src="assets/flats-silver.jpg" alt="Caléa Flats Silver" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Preview -->
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Shop the Collection</h2>
+            <p class="muted">Timeless colors • Clean lines • Designed for comfort.</p>
+          </div>
+
+          <div class="controls">
+            <div class="control">
+              <label for="filterType">Type</label>
+              <select id="filterType">
+                <option value="all">All</option>
+                <option value="heels">Heels</option>
+                <option value="flats">Flats</option>
+              </select>
+            </div>
+
+            <div class="control">
+              <label for="filterColor">Color</label>
+              <select id="filterColor">
+                <option value="all">All</option>
+                <option value="black">Black</option>
+                <option value="brown">Brown</option>
+                <option value="cream">Cream</option>
+                <option value="silver">Silver</option>
+              </select>
+            </div>
+
+            <div class="control">
+              <label for="filterSize">Size</label>
+              <select id="filterSize">
+                <option value="all">All</option>
+                <option value="35">35</option><option value="36">36</option><option value="37">37</option>
+                <option value="38">38</option><option value="39">39</option><option value="40">40</option>
+                <option value="41">41</option><option value="42">42</option><option value="43">43</option>
+                <option value="44">44</option><option value="45">45</option>
+              </select>
+            </div>
+
+            <div class="control control--search">
+              <label for="searchInput">Search</label>
+              <input id="searchInput" type="text" placeholder="Cari: heels, mary jane, black..." />
+            </div>
+          </div>
+        </div>
+
+        <div class="grid" id="productGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Why -->
+    <section class="section section--alt" id="why">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Why Caléa</h2>
+            <p class="muted">Dibuat untuk elegan yang nyaman, bukan cuma cantik di foto.</p>
+          </div>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <h3>Size-inclusive 35–45</h3>
+            <p>Ramping & tetap elegan, termasuk untuk ukuran besar. Fokus pada fit yang pas.</p>
+          </div>
+          <div class="feature">
+            <h3>Breathable & anti-lecet</h3>
+            <p>Material yang membantu mengurangi lembap/bau, dan desain tumit yang lebih nyaman.</p>
+          </div>
+          <div class="feature">
+            <h3>Soft-luxury aesthetic</h3>
+            <p>Palet warna netral (cream–coklat–hitam) yang terlihat mewah dan tidak lekang oleh waktu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Size Guide -->
+    <section class="section" id="size-guide">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Size Guide</h2>
+            <p class="muted">Tips singkat agar tidak salah ukuran saat belanja online.</p>
+          </div>
+        </div>
+
+        <div class="size-guide">
+          <ol>
+            <li>Letakkan kertas di lantai, injak dengan kaki (berdiri tegak).</li>
+            <li>Gambar garis dari ujung tumit sampai ujung jari terpanjang.</li>
+            <li>Ukur panjangnya (cm), lalu pilih size yang paling mendekati.</li>
+            <li>Jika kaki lebar / ukuran di antara 2 size, pilih size yang lebih besar.</li>
+          </ol>
+
+          <div class="note">
+            <p><strong>Catatan:</strong> Caléa menyediakan size 35–45. Kamu juga bisa cantumkan kebijakan
+              <em>exchange</em> (tukar ukuran) di halaman checkout agar pembeli lebih yakin.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section section--alt" id="reviews">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Customer Reviews</h2>
+            <p class="muted">Ulasan singkat untuk membangun trust (bisa kamu edit sesuai kebutuhan).</p>
+          </div>
+        </div>
+
+        <div class="reviews">
+          <article class="review">
+            <p class="review__stars">★★★★★</p>
+            <p class="review__text">“Aku size 41 dan biasanya susah cari yang tetap ramping. Ini nyaman dipakai kerja seharian.”</p>
+            <p class="review__name">— Rania, Surabaya</p>
+          </article>
+          <article class="review">
+            <p class="review__stars">★★★★★</p>
+            <p class="review__text">“Heels-nya keliatan classy banget, tapi nggak bikin lecet. Worth it!”</p>
+            <p class="review__name">— Dita, Jakarta</p>
+          </article>
+          <article class="review">
+            <p class="review__stars">★★★★☆</p>
+            <p class="review__text">“Warnanya cocok untuk outfit apapun. Kesan elegan tapi tetap simple.”</p>
+            <p class="review__name">— Mira, Bandung</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Contact</h2>
+            <p class="muted">Untuk pemesanan, kerja sama butik (B2B), atau tanya sizing.</p>
+          </div>
+        </div>
+
+        <div class="contact">
+          <div class="contact__box">
+            <h3>Customer Support</h3>
+            <p>WhatsApp: <span class="mono">08xxxxxxxxxx</span></p>
+            <p>Email: <span class="mono">support@calea.id</span></p>
+            <p class="muted">*Ganti sesuai kontakmu.</p>
+          </div>
+
+          <div class="contact__box">
+            <h3>Wholesale / Partner</h3>
+            <p>Untuk butik/retail: MOQ rendah & materi display tersedia.</p>
+            <p>Email: <span class="mono">partner@calea.id</span></p>
+            <p class="muted">*Ganti sesuai kontakmu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">Caléa</p>
+        <p class="muted">Soft-luxury • Timeless • Inclusive comfort</p>
+      </div>
+
+      <div class="footer__links">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#size-guide">Size Guide</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <p class="footer__copy">© <span id="year"></span> Caléa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside class="drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer__overlay" id="closeCartOverlay"></div>
+    <div class="drawer__panel" role="dialog" aria-label="Cart">
+      <div class="drawer__head">
+        <h3>Your Cart</h3>
+        <button class="icon-btn" id="btnCloseCart" aria-label="Close cart">✕</button>
+      </div>
+
+      <div class="drawer__body" id="cartItems"></div>
+
+      <div class="drawer__foot">
+        <div class="row">
+          <span class="muted">Subtotal</span>
+          <strong id="cartSubtotal">Rp0</strong>
+        </div>
+        <button class="btn btn--primary btn--full" id="btnCheckout">Checkout</button>
+        <p class="tiny muted">*Untuk tugas UAS, tombol checkout bisa diarahkan ke WhatsApp / form.</p>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
